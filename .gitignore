@@ -1,0 +1,24 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+# Ignore SublimeText files
+/*.sublime-project
+/*.sublime-workspace
+
+# Ignore Coveralls config file (it should be kept secret)
+/.coveralls.yml
+
+# Ignore Gemfile.lock, since we're building a gem
+/Gemfile.lock
+
+# Ignore built gems
+/*.gem
+
+# rspec failure tracking
+.rspec_status
