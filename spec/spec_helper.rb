@@ -3,6 +3,9 @@ Coveralls.wear!
 
 require "bundler/setup"
 require "eztvwrapper"
+require 'webmock/rspec'
+
+WebMock.disable_net_connect!(allow_localhost: true)
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -13,5 +16,10 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.before(:each) do
+    stub_request(:get, "https://eztv.ag/showlist/").to_return(File.new("spec/fixtures/responses/eztv_showlist.http"))
+    stub_request(:get, "https://eztv.ag/shows/1250/mr-robot/").to_return(File.new("spec/fixtures/responses/eztv_shows_1250_mr-robot.http"))
   end
 end
