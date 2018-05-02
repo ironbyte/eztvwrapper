@@ -8,6 +8,9 @@ RSpec.describe EZTVWrapper::Episode do
   describe "#show_name" do
   end
 
+  describe "#episode_url" do
+  end
+
   describe "#season_no" do
   end
 
