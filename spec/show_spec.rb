@@ -13,6 +13,7 @@ RSpec.describe EZTVWrapper::Show do
         expect{ EZTVWrapper::Show.new("Shingeki no Kyojin") }.to raise_error(EZTVWrapper::Errors::ShowNotFound)
       end
     end
+  end
 
   describe "#show_url" do
     it "returns the EZTV Show page URL as a string" do
