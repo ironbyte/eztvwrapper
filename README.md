@@ -1,8 +1,8 @@
 # EZTVWrapper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/eztvwrapper`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![Build Status](https://travis-ci.org/ironbyte/eztvwrapper.svg?branch=master)](https://travis-ci.org/ironbyte/eztvwrapper)[![Dependency Status](https://gemnasium.com/badges/github.com/ironbyte/eztvwrapper.svg)](https://gemnasium.com/github.com/ironbyte/eztvwrapper)[![Coverage Status](https://coveralls.io/repos/github/ironbyte/eztvwrapper/badge.svg?branch=master)](https://coveralls.io/github/ironbyte/eztvwrapper?branch=master)
 
-TODO: Delete this and the text above, and describe your gem
+Simple Ruby wrapper for EZTV that enables you to search for shows and to pull up show data in a structured format.
 
 ## Installation
 
@@ -47,7 +47,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Eztvwrapper project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/eztvwrapper/blob/master/CODE_OF_CONDUCT.md).
