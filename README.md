@@ -1,6 +1,6 @@
 # EZTVWrapper
 
-[![Build Status](https://travis-ci.org/ironbyte/eztvwrapper.svg?branch=master)](https://travis-ci.org/ironbyte/eztvwrapper)[![Dependency Status](https://gemnasium.com/badges/github.com/ironbyte/eztvwrapper.svg)](https://gemnasium.com/github.com/ironbyte/eztvwrapper)[![Coverage Status](https://coveralls.io/repos/github/ironbyte/eztvwrapper/badge.svg?branch=master)](https://coveralls.io/github/ironbyte/eztvwrapper?branch=master)
+[![Build Status](https://travis-ci.org/ironbyte/eztvwrapper.svg?branch=master)](https://travis-ci.org/ironbyte/eztvwrapper)[![Coverage Status](https://coveralls.io/repos/github/ironbyte/eztvwrapper/badge.svg?branch=master)](https://coveralls.io/github/ironbyte/eztvwrapper?branch=master)
 
 Simple Ruby wrapper for EZTV that enables you to search for shows and to pull up show data in a structured format.
 
