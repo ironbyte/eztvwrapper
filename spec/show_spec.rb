@@ -1,6 +1,7 @@
 RSpec.describe EZTVWrapper::Show do
   subject(:mr_robot_show) { EZTVWrapper::Show.new("Mr. Robot") }
 
+
   describe "#initialize(show_name)" do
     context "When the requested TV show is found" do
       it "returns a valid instance of EZTVWrapper::Show" do
@@ -18,7 +19,6 @@ RSpec.describe EZTVWrapper::Show do
   describe "#show_url" do
     it "returns the correct requested TV Show's EZTV page URL as a string" do
       expect(mr_robot_show.show_url).to eql "/shows/1250/mr-robot/"
-      expect(mr_robot_show.show_url).to be_instance_of(String)
     end
   end
 
