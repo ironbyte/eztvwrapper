@@ -1,14 +1,6 @@
-require "httparty"
-require "nokogiri"
-require "pry"
-
 module EZTVWrapper
   class Show
-    include HTTParty
-
     attr_reader :show_name, :show_url
-
-    base_uri "https://eztv.ag/"
 
     def initialize(show_name)
       @show_name = show_name
