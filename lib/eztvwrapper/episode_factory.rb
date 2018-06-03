@@ -1,3 +1,4 @@
+require "addressable"
 require "httparty"
 require "nokogiri"
 
@@ -12,12 +13,13 @@ module EZTVWrapper
       @episodes = []
 
       episode_list_node.reverse.each do |episode_node|
-        original_ep_name = episode_node.css("a.epinfo").text
         episode_url = episode_node.css("a.epinfo").attribute("href").text
-        magnet_uri = episode_node.css("a.magnet").attribute("href").text
         torrent_url = episode_node.css("a.download_1").attribute("href").text
+        magnet_uri = episode_node.css("a.magnet").attribute("href").text
+        original_episode_name = extract_original_episode_name(torrent_url)
+
         links = { :episode_url => episode_url, :magnet_uri => magnet_uri, :torrent_url => torrent_url }
-        new_ep = Episode.new(original_ep_name, links)
+        new_ep = Episode.new(original_episode_name, links)
         @episodes << new_ep
       end
 
@@ -32,6 +34,11 @@ module EZTVWrapper
 
     def self.episode_list_page
       get(@show_url)
+    end
+
+    def self.extract_original_episode_name(torrent_url)
+      path = Addressable::URI.parse(torrent_url).path
+      File.basename(path).gsub(/(\.torrent)/, "")
     end
   end
 end

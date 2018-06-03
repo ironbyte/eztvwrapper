@@ -1,7 +1,7 @@
 RSpec.describe EZTVWrapper::Episode do
   subject(:mrrobot_hdtv_720p_episode) do
     EZTVWrapper::Episode.new(
-      "Mr.Robot.S02E05.720p.HDTV.x264-FLEET[eztv]",
+      "Mr.Robot.S02E05.720p.HDTV.x264-FLEET[eztv].mkv",
       { 
         :episode_url => "https://eztv.ag/ep/153090/mr-robot-s02e05-720p-hdtv-x264-fleet/",
         :magnet_uri => "magnet:?xt=urn:btih:70ed63abe40dfb69b995febb1fc770a30661740c&dn=Mr.Robot.S02E05.720p.HDTV.x264-FLEET%5Beztv%5D.mkv%5Beztv%5D&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A80&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969",
@@ -9,10 +9,9 @@ RSpec.describe EZTVWrapper::Episode do
       }
     )
   end
-
   subject(:strangerthing_webrip_720p_episode) do
     EZTVWrapper::Episode.new(
-      "Stranger.Things.S02E02.Chapter.Two.Trick.Or.Treat.Freak.720p.NF.WEBRip.DD5.1.x264-NTb[eztv]",
+      "Stranger.Things.S02E02.Chapter.Two.Trick.Or.Treat.Freak.720p.NF.WEBRip.DD5.1.x264-NTb[eztv].mkv",
       {
         :episode_url => "",
         :magnet_uri => "",
@@ -20,10 +19,9 @@ RSpec.describe EZTVWrapper::Episode do
       }
     )
   end
-
   subject(:proper_gameofthrones_hdtv_720p_episode) do
     EZTVWrapper::Episode.new(
-      "Game.of.Thrones.S07E06.PROPER.720p.HDTV.h264-TBS[eztv]",
+      "Game.of.Thrones.S07E06.PROPER.720p.HDTV.h264-TBS[eztv].mkv",
       {
         :episode_url => "",
         :magnet_uri => "",
@@ -33,7 +31,7 @@ RSpec.describe EZTVWrapper::Episode do
 
   describe "#original_episode_name" do
     it "returns the original episode name as a string" do
-      expect(mrrobot_hdtv_720p_episode.original_episode_name).to eql "Mr.Robot.S02E05.720p.HDTV.x264-FLEET[eztv]"
+      expect(mrrobot_hdtv_720p_episode.original_episode_name).to eql "Mr.Robot.S02E05.720p.HDTV.x264-FLEET[eztv].mkv"
     end
   end
 
