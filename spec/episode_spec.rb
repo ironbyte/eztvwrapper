@@ -37,7 +37,7 @@ RSpec.describe EZTVWrapper::Episode do
 
   describe "#show_name" do
     it "returns the correct name of the TV Show as a string" do
-      expect(mrrobot_hdtv_720p_episode.show_name).to eql "Mr. Robot"
+      expect(mrrobot_hdtv_720p_episode.show_name).to eql "Mr.Robot"
     end
   end
 
