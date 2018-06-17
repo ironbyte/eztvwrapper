@@ -5,13 +5,13 @@ RSpec.describe EZTVWrapper::Show do
   describe "#initialize(show)" do
     context "When show is found" do
       it "returns a valid instance of Show class" do
-        expect(existent_show).to be_instance_of(EZTVWrapper::Show)
+        expect(existent_show).to be_instance_of EZTVWrapper::Show
       end
     end
 
     context "When show is not found" do
       it "raises EZTVWrapper::TVShowNotFound" do
-        expect{ non_existent_show }.to raise_error(EZTVWrapper::ShowNotFound)
+        expect{ non_existent_show }.to raise_error EZTVWrapper::ShowNotFound
       end
     end
   end
