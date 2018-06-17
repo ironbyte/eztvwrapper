@@ -5,7 +5,7 @@ RSpec.describe EZTVWrapper::GetShowList do
   let(:some_tv_shows) { ["Expanse, The", "Game of Thrones", "Gotham", "Mr. Robot", "Stranger Things" ] }
 
   describe ".call" do
-    it "downloads EZTV ShowList page via HTTP GET request" do
+    it "downloads EZTV ShowList page" do
       EZTVWrapper::GetShowList.call
       expect(a_request(:get, "https://eztv.ag/showlist/")).to have_been_made
     end
@@ -15,7 +15,7 @@ RSpec.describe EZTVWrapper::GetShowList do
       expect(a_request(:get, "https://eztv.ag/showlist/")).to have_been_made.once
     end
 
-    it "returns the parsed list of TV Shows" do
+    it "returns the list of parsed shows" do
       expect(show_list).to include(*some_tv_shows)
     end
   end
