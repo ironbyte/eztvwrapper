@@ -15,7 +15,7 @@ RSpec.describe EZTVWrapper::GetShowList do
       expect(a_request(:get, "https://eztv.ag/showlist/")).to have_been_made.once
     end
 
-    it "returns the list of parsed shows" do
+    it "returns an exhaustive list of parsed shows" do
       expect(show_list).to include(*some_tv_shows)
     end
   end
