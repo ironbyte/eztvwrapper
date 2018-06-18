@@ -15,7 +15,7 @@ module EZTVWrapper
       raise EZTVWrapper::ParsingError if episode_list_node.nil?
       
       episode_list_node.reverse.each do |episode_node|
-        episode_url = episode_node.css("a.epinfo").attribute("href").text
+        episode_url = Addressable::URI.parse(base_uri).join(episode_node.css("a.epinfo").attribute("href").text).to_str
         torrent_url = episode_node.css("a.download_1").attribute("href").text
         magnet_uri = episode_node.css("a.magnet").attribute("href").text
 
